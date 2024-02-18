@@ -1,0 +1,320 @@
+body {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    font-family: sans-serif;
+    color: #000000;
+    margin: 15px;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-weight : bold;
+    text-decoration: none;
+}
+
+
+
+/*Topo*/
+.topo .ui-panel-content {
+    border: none !important;
+    background-color: #171c1f !important;
+    color: #fff !important;
+}
+
+.ui-g-4 .button-container .ui-panel-content {
+    display: flex;
+    justify-content: flex-end;
+    border: none !important;
+}
+
+.ui-g-4 .button {
+    margin-left: 20px;
+}
+
+
+
+
+/*conteúdo*/
+/*Cards*/
+.content-panel .ui-panel-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem !important;
+
+}
+
+.ui-card {
+    margin-left: .7rem;
+    margin-right: .7rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem !important;
+
+    box-shadow: 12px 17px 43px -19px rgba(0,0,0,0.22) !important;
+    -webkit-box-shadow: 12px 17px 43px -19px rgba(0,0,0,0.22) !important;
+    -moz-box-shadow: 12px 17px 43px -19px rgba(0,0,0,0.22) !important;
+}
+
+.ui-card-subtitle {
+    margin-bottom: 0 !important;
+}
+
+.ui-card .txtValor {
+    opacity: unset;
+}
+
+
+/*Rodapé*/
+.header-container .ui-panel-content {
+    background-color: #171c1f !important;
+    border: none !important;
+    width: 100vw;
+}
+
+
+.ui-g-4 .header-container-column .ui-panel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+    border: none !important;
+    width: 33.333%;
+}
+
+
+
+/*Login*/
+.login .ui-panel, login .ui-panel-content {
+    border: none !important;
+}
+
+.ui-panelgrid td, .ui-panelgrid tr {
+    border-style: none !important
+}
+
+.ui-input-icon-right > .ui-inputfield {
+    padding-right: .5rem !important;
+}
+
+.ui-dialog {
+    border-radius: 1.2rem !important;
+}
+
+.login .ui-panel-content {
+    border-radius: .8rem !important;
+}
+
+.login .ui-panel-content .login-panel-buttons {
+    display: flex;
+    justify-content: end;
+    border: none !important;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.login-panel-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.login .login-link {
+    font-weight: normal;
+    color: #2196F3;
+    margin: 1rem;
+}
+
+.login .right {
+    text-align: right;
+}
+
+
+
+/*Formulário Cliente*/
+.cadastro-content-form .ui-panel-content  {
+    border: none !important;
+}
+
+#cadastroForm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 1.5rem;
+}
+
+#titulo-cadastro-usuario {
+    font-size: 2rem;
+    padding: .8rem;
+}
+
+.cadastro-container .cadastro-content-form .button-cadastrar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-botton: 2rem;
+}
+
+#div-cadastroForm {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadastro-container .cadastro-content-form #cadastroForm input {
+    width: 80%;
+}
+
+div#cadastroForm\:tipoCartao {
+    width: 80%;
+}
+
+
+/*Formulário Produtos*/
+#cadastroForm-produto {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 1.5rem;
+}
+
+.cadastro-container .cadastro-content-form #cadastroForm-produto input {
+    width: 100%;
+}
+
+#div-cadastroForm-produto {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*Página comprar*/
+#comprarForm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 1.5rem;
+}
+
+
+#comprarForm .ui-panel .ui-panel-content {
+    border: none;
+    background-color: #f1f1f1;
+    padding: 1.3rem;
+    border-radius: 1.5rem;
+}
+
+
+
+.ui-panel-titlebar {
+    padding: 1.8rem !important;
+    font-size: 1.7rem;
+    text-align: center;
+    border-top-left-radius: 1.5rem !important;
+    border-top-right-radius: 1.5rem !important;
+}
+
+.comprar-imagem-produto {
+    width: 50%;
+    padding: 1.3rem;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2.5rem;
+}
+
+.form-subtitulo-nomeproduto {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.form-conteudo {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#comprarForm .ui-panel .ui-panel-content table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2rem;
+    color: #495057;
+}
+
+#comprarForm .ui-panel .ui-panel-content table label {
+    font-size: 1.1rem;
+}
+
+#comprarForm .ui-panel .ui-panel-content table button {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#comprarForm .ui-panel .ui-panel-content table input {
+    font-size: 1.1rem;
+}
+
+#comprarForm:quantity {
+    width: 10% !important;
+}
+
+
+/*PainelUsuarios*/
+.button-edition {
+    padding: .5rem !important;
+}
+
+
+.ui-datatable-tablewrapper .ui-button  {
+    text-align: center;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    width: 2.8rem;
+
+}
+
+.ui-datatable-tablewrapper .acoes-btn {
+    text-align: center !important;
+    padding: 0 !important;
+    width: 2.7rem !important;
+    
+}
+
+.ui-datatable-tablewrapper .acoes-btn .ui-button-text {
+    text-align: center !important;
+    padding: .35rem !important;
+}
+
+.ui-datatable-tablewrapper .acoes-btn .ui-button-icon-left  {
+    margin-left: -.2rem !important;
+}
+
+
+
+.ui-datatable-tablewrapper .ui-button-icon-left {
+    left: 35% !important;
+}
+
+.ui-datatable-tablewrapper table tbody tr .acoes {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./templates/mainTemplate.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+    <ui:define name="content">
+
+        <p:panel styleClass="cadastro-container">
+
+            <p:panel styleClass="cadastro-content-form">
+
+                <h:form id="cadastroForm">
+                    <div id="div-cadastroForm">                        
+                        <h2 id="titulo-cadastro-usuario"> Cadastro de Vendedores </h2>
+
+                        <p:panelGrid columns="4" style="width: 100%;" columnClasses="ui-g-12">
+                            <p:outputLabel for="nome" value="Nome" />
+                            <p:inputText id="nome" value="#{vendedorBean.nome}" />
+
+                            <p:outputLabel for="dataNascimento" value="Data de Nascimento" />
+                            <p:calendar id="dataNascimento" value="#{vendedorBean.datanascimento}" showOn="button" pattern="dd/MM/yyyy" />
+
+                            <p:outputLabel for="rua" value="Rua" />
+                            <p:inputText id="rua" value="#{vendedorBean.rua}" />
+
+                            <p:outputLabel for="numero" value="Número" />
+                            <p:inputText type="number" id="numero" value="#{vendedorBean.numero}" />
+
+                            <p:outputLabel for="complemento" value="Complemento" />
+                            <p:inputText id="complemento" value="#{vendedorBean.complemento}" />
+
+                            <p:outputLabel for="bairro" value="Bairro" />
+                            <p:inputText id="bairro" value="#{vendedorBean.bairro}" />
+
+                            <p:outputLabel for="cidade" value="Cidade" />
+                            <p:inputText id="cidade" value="#{vendedorBean.cidade}" />
+
+                            <p:outputLabel for="estado" value="Estado" />
+                            <p:inputText id="estado" value="#{vendedorBean.estado}" />
+
+                            <p:outputLabel for="cpf" value="CPF" />
+                            <p:inputMask id="cpf" value="#{vendedorBean.cpf}" mask="999.999.999-99" />
+
+                            <p:outputLabel for="rg" value="RG" />
+                            <p:inputMask id="rg" value="#{vendedorBean.rg}" mask="99.999.999-9" />
+
+
+
+                            <p:outputLabel for="email" value="E-mail" />
+                            <p:inputText id="email" value="#{vendedorBean.email}" />
+
+                            <p:outputLabel for="username" value="Nome de Usuário" />
+                            <p:inputText id="username" value="#{vendedorBean.nomeusuario}" />
+
+                            <p:outputLabel for="senha" value="Senha" />
+                            <p:password id="senha" value="#{vendedorBean.senhahash}" feedback="true" />
+
+                            <p:outputLabel for="senha2" value="Reinsira a Senha" />
+                            <p:password id="senha2" value="#{vendedorBean.senhahash}" feedback="true" />
+                        </p:panelGrid>
+                    </div>
+
+                    <p:commandButton styleClass="button-cadastrar" value="Cadastrar" action="#{vendedorBean.cadastrar()}" />
+
+                </h:form>
+            </p:panel>
+
+        </p:panel>
+
+    </ui:define>
+
+</ui:composition>

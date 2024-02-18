@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+
+    <p:panel styleClass="login">
+        <h:form id="formAdmin">
+            <p:panelGrid columns="2">
+
+                <p:outputLabel for="iUsuario" value="Usuário: " />
+                <p:inputText id="iUsuario" value="#{autenticacaoBean.nomeadmin}" required="true" />
+
+                <p:outputLabel for="iToglle" value="Senha: " />
+                <p:password id="iToglle" value="#{autenticacaoBean.senhaadmin}" toggleMask="true" redisplay="true"/>
+
+            </p:panelGrid>
+
+            <div class="login-panel-buttons">
+                <p:commandButton icon="pi pi-check" value="Entrar" action="#{autenticacaoBean.autenticarAdmin()}" />
+                <p:commandButton icon="pi pi-times" value="Cancel" styleClass="ui-button-secondary" style="margin-left: .5em" onclick="PF('loginDialog').close()" />                
+            </div>
+            <div class="login-panel-links">                
+                <h:link class="login-link" outcome="cadastroAdmin">Cadastre-se</h:link>
+                <h:outputLink class="login-link right" value="/esqueci_acesso.xhtml">Esqueci meu acesso!</h:outputLink>
+            </div>
+        </h:form>
+    </p:panel>
+
+
+</ui:composition>
+
+

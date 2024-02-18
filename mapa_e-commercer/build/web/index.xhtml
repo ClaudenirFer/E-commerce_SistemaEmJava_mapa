@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./templates/mainTemplate.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+    <ui:define name="content">
+        <p:panel styleClass="content-panel"> 
+            <!--card 1-->
+
+            <ui:repeat value="#{produtoBean.produtos}" var="produto">            
+                <p:card style="width: 20em">
+                    <f:facet name="header">
+                        <p:graphicImage value="#{produto.imagem}" alt="user header"/>
+                    </f:facet>
+                    <f:facet name="title">
+                        <h:outputText value="#{produto.nome}" />
+                    </f:facet>
+                    <f:facet name="subtitle">
+                        <h:outputText value="#{produto.descricao}" />
+                    </f:facet>
+
+                    <p:outputLabel value="Vendedor: " />
+                    <p:inputText class="txtValor" style="border: none !important; " disabled="true" value="#{produto.vendedor_Id.nome}"/>
+
+                    <p:outputLabel value="Valor: " />
+                    <p:inputText class="txtValor" style="border: none !important; " disabled="true" value="#{produto.valor}"/>
+
+                    <f:facet name="footer">
+                        <h:form>                        
+                            <p:commandButton icon="pi pi-check" value="Comprar" action="#{produtoBean.comprar(produto)}"/>
+                            <p:commandButton icon="pi pi-times" value="Cancel" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+                        </h:form>
+                    </f:facet>
+                </p:card>
+            </ui:repeat>
+        </p:panel>
+    </ui:define>
+
+</ui:composition>
+
+
+
