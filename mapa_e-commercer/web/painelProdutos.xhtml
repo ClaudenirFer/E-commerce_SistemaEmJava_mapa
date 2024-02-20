@@ -36,8 +36,7 @@
         <p:panel styleClass="cadastro-container">   
             <h3> Produtos </h3>
             <p:panel styleClass="cadastro-container-form"> 
-                <h:form id="formVend">
-
+                <h:form>
                     <p:dataTable id="produtosVendedor" styleClass="painelUsuarios" value="#{produtoBean.produtosDoVendedor}" var="produto" emptyMessage="Nenhum usuário cadastrado" paginator="true" editable="true" editMode="cell" widgetVar="cellProducts">
                         <p:ajax event="cellEdit" listener="#{produtoBean.onCellEdit}" update="@this" />
 
