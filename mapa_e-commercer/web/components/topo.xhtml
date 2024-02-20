@@ -1,49 +1,54 @@
 
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:f="http://xmlns.jcp.org/jsf/core"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:p="http://primefaces.org/ui">
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <p:panel styleClass="topo">        
-        <div class="ui-g">
-            <div class="ui-g-4">
-                <h2> <h:link style="color: #fff" outcome="index"> E-Commerce </h:link></h2>
+<!--                template="../templates/mainTemplate.xhtml"-->
+
+    <!--<ui:define name="topo">-->
+        <p:panel styleClass="topo">        
+            <div class="ui-g">
+                <div class="ui-g-4">
+                    <h2> <h:link style="color: #fff" outcome="/index"> E-Commerce </h:link></h2>
+                </div>
+                <div class="ui-g-4"></div>
+                <div class="ui-g-4">
+                    <p:panel styleClass="button-container">
+                        <h:form style="padding: 0 !important; margin: 0 !important">
+                            <p:tooltip for="topoCarrinhoBtn" value="Suas Compras" />                            
+                            <p:commandButton id="topoCarrinhoBtn" styleClass="p-button-primary button"  icon="pi pi-shopping-cart" />
+                            <p:tooltip for="topoVendedorBtn" value="Vendedor" />                            
+                            <p:commandButton id="topoVendedorBtn"  styleClass="p-button-primary button" icon="pi pi-briefcase" action="#{autenticacaoBean.verificarVendedorLogado()}" />
+                            <p:tooltip for="topoUsuarioBtn" value="Usuário" />                            
+                            <p:commandButton id="topoUsuarioBtn"  styleClass="p-button-success button" icon="pi pi-user" action="#{autenticacaoBean.verivicaUsuarioLogado()}" />
+                            <p:tooltip for="topoAdminBtn" value="Administrador" />                            
+                            <p:commandButton id="topoAdminBtn"  styleClass="p-button-danger button" icon="pi pi-cog" action="#{autenticacaoBean.verivicaAdminLogado()}" />
+                        </h:form>
+                    </p:panel>
+                </div>
             </div>
-            <div class="ui-g-4"></div>
-            <div class="ui-g-4">
-                <p:panel styleClass="button-container">
-                    <h:form style="padding: 0 !important; margin: 0 !important">
-                        <p:tooltip for="topoCarrinhoBtn" value="Suas Compras" />                            
-                        <p:commandButton id="topoCarrinhoBtn" styleClass="p-button-primary button"  icon="pi pi-shopping-cart" />
-                        <p:tooltip for="topoVendedorBtn" value="Vendedor" />                            
-                        <p:commandButton id="topoVendedorBtn"  styleClass="p-button-primary button" icon="pi pi-briefcase" action="#{autenticacaoBean.verificarVendedorLogado()}" />
-                        <p:tooltip for="topoUsuarioBtn" value="Usuário" />                            
-                        <p:commandButton id="topoUsuarioBtn"  styleClass="p-button-success button" icon="pi pi-user" action="#{autenticacaoBean.verivicaUsuarioLogado()}" />
-                        <p:tooltip for="topoAdminBtn" value="Administrador" />                            
-                        <p:commandButton id="topoAdminBtn"  styleClass="p-button-danger button" icon="pi pi-cog" action="#{autenticacaoBean.verivicaAdminLogado()}" />
-                    </h:form>
-                </p:panel>
-            </div>
-        </div>
-    </p:panel>
+        </p:panel>
 
 
 
 
-    <!-- Diálogo de Login Usuário -->
-    <p:dialog header="Login Usuário" widgetVar="loginDialog" resizable="false" modal="true" >
-        <ui:include src="loginUsuario.xhtml" />
-    </p:dialog>
 
-    <!-- Diálogo de Login Vendedor -->
-    <p:dialog header="Login Vendedor" widgetVar="loginDialogVendedor" resizable="false" modal="true" >
-        <ui:include src="loginVendedor.xhtml" />
-    </p:dialog>
+        <!-- Diálogo de Login Usuário -->
+        <p:dialog header="Login Usuário" widgetVar="loginDialog" resizable="false" modal="true" >
+            <ui:include src="loginUsuario.xhtml" />
+        </p:dialog>
 
-    <!-- Diálogo de Configurações -->
-    <p:dialog header="Administrador" widgetVar="settingsDialog" resizable="false" modal="true" >
-        <ui:include src="loginAdmin.xhtml" />
-    </p:dialog>
+        <!-- Diálogo de Login Vendedor -->
+        <p:dialog header="Login Vendedor" widgetVar="loginDialogVendedor" resizable="false" modal="true" >
+            <ui:include src="loginVendedor.xhtml" />
+        </p:dialog>
 
+        <!-- Diálogo de Configurações -->
+        <p:dialog header="Administrador" widgetVar="settingsDialog" resizable="false" modal="true" >
+            <ui:include src="loginAdmin.xhtml" />
+        </p:dialog>
+
+    <!--</ui:define>-->
 </ui:composition>
