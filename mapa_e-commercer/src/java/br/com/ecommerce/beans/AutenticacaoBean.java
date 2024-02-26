@@ -34,7 +34,7 @@ public class AutenticacaoBean implements Serializable {
     private final UsuarioRepositorio usuarioRepositorio;
     private final AdministradorRepositorio administradorRepositorio;
     private final VendedorRepositorio vendedorRepositorio;
-        
+
     private String nomeusuario;
     private String senhausuario;
     private String nomevendedor;
@@ -44,7 +44,7 @@ public class AutenticacaoBean implements Serializable {
     private String sessionId = "";
     private String sessionIdAdmin = "";
     private long sessionIdVendedor;
-
+    
 
     public AutenticacaoBean() {
         EntityManager entityManager = JPAUtil.getEntityManager();
@@ -95,8 +95,8 @@ public class AutenticacaoBean implements Serializable {
         }
         return null;
     }
-
     
+
     // VERIFICA USUÁRIO LOGADO
     public Boolean verivicaUsuarioLogado() {
 
@@ -119,8 +119,8 @@ public class AutenticacaoBean implements Serializable {
 
         }
     }
-
     
+
     // AUTENTICAR VENDEDOR
     public String autenticarVendedor() {
 
@@ -242,8 +242,8 @@ public class AutenticacaoBean implements Serializable {
         }
         return null;
     }
-
     
+
     // Verifica Administrador Logado
     public Boolean verivicaAdminLogado() {
 
@@ -266,8 +266,8 @@ public class AutenticacaoBean implements Serializable {
             return true;
         }
     }
-    
 
+    
     public String cancelar() {
         PrimeFaces.current().executeScript("if(PF('loginDialog').isVisible()) PF('loginDialog').hide();");
         limparImputs();
@@ -278,8 +278,8 @@ public class AutenticacaoBean implements Serializable {
         setNomeusuario("");
         setSenhausuario("");
     }
-
     
+
     // GETTERS E SETTERS
     public String getNomeusuario() {
         return nomeusuario;
