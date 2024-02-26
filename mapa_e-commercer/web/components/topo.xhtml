@@ -5,9 +5,6 @@
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<!--                template="../templates/mainTemplate.xhtml"-->
-
-    <!--<ui:define name="topo">-->
         <p:panel styleClass="topo">        
             <div class="ui-g">
                 <div class="ui-g-4">
@@ -31,10 +28,6 @@
             </div>
         </p:panel>
 
-
-
-
-
         <!-- Diálogo de Login Usuário -->
         <p:dialog header="Login Usuário" widgetVar="loginDialog" resizable="false" modal="true" >
             <ui:include src="loginUsuario.xhtml" />
@@ -45,7 +38,7 @@
             <ui:include src="loginVendedor.xhtml" />
         </p:dialog>
 
-        <!-- Diálogo de Configurações -->
+        <!-- Diálogo de Administrador -->
         <p:dialog header="Administrador" widgetVar="settingsDialog" resizable="false" modal="true" >
             <ui:include src="loginAdmin.xhtml" />
         </p:dialog>
