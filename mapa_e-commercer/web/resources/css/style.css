@@ -17,8 +17,6 @@ a {
     text-decoration: none;
 }
 
-
-
 /*Topo*/
 .topo .ui-panel-content {
     border: none !important;
@@ -38,9 +36,12 @@ a {
 
 
 
-
 /*conteúdo*/
 /*Cards*/
+#content {
+    min-height: 68%;    
+}
+
 .content-panel .ui-panel-content {
     display: flex;
     justify-content: space-around;
