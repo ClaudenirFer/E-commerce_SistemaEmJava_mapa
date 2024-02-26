@@ -13,20 +13,22 @@
     </h:head>
 
     <h:body>
+        <div id="container">            
+            <div id="top" class="p-text-center p-text-bold">
+                <ui:include src="../components/topo.xhtml" />
+            </div>
 
-        <div id="top" class="p-text-center p-text-bold">
-            <ui:include src="../components/topo.xhtml" />
+            <div id="content">
+                <ui:insert name="content">
+                    Content
+                </ui:insert>
+            </div>
+
+            <div id="bottom">
+                <ui:include src="../components/rodape.xhtml" />
+            </div>
         </div>
 
-        <div id="content">
-            <ui:insert name="content">
-                Content
-            </ui:insert>
-        </div>
-
-        <div id="bottom">
-            <ui:include src="../components/rodape.xhtml" />
-        </div>
 
     </h:body>
 
