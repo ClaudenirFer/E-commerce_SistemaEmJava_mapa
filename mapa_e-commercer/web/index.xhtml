@@ -22,7 +22,10 @@
                     </f:facet>
                     <f:facet name="subtitle">
                         <h:outputText value="#{produto.descricao}" />
-                    </f:facet>
+                    </f:facet> 
+                    
+                    <p:outputLabel value="Categoria: " />
+                    <p:inputText class="txtValor" style="border: none !important; " disabled="true" value="#{produto.categoriaId.nome}"/>
 
                     <p:outputLabel value="Vendedor: " />
                     <p:inputText class="txtValor" style="border: none !important; " disabled="true" value="#{produto.vendedor_Id.nome}"/>
