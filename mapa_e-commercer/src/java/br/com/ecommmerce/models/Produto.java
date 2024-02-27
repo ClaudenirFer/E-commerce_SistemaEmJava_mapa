@@ -49,9 +49,9 @@ public class Produto implements Serializable {
     @JoinColumn(name = "VENDEDOR_ID", referencedColumnName = "ID")
     @ManyToOne(fetch = FetchType.LAZY)
     private Vendedor vendedor_Id;
-    //  @OneToMany(cascade = CascadeType.ALL, mappedBy = "produtoId", fetch = FetchType.LAZY)
-    //  private Integer quantidade;
-    //  private List<Pedido> pedidoList;
+    //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "produtoId", fetch = FetchType.LAZY)
+    //    private Integer quantidade;
+    //    private List<Pedido> pedidoList;
     
 
     //    CONSTRUTORES
