@@ -5,33 +5,32 @@
 package br.com.ecommmerce.models;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
-
-
-// +++++++++++++++++++    CATEGORIA NÃO CHEGOU A SER RELACIONADA NA IMPLEMENTAÇÃO.  ++++++++++++++
-// ******************   FALTOU UM TEMPO PARA ISSO ****************************
-
 
 /**
  *
  * @author Claudenir
  */
 @Entity
-//@MappedSuperclass
 @Table(name = "`tb_categoria`", catalog = "`e-commerce`", schema = "")
 @XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Categoria.findAll", query = "SELECT c FROM Categoria c"),
+//    @NamedQuery(name = "User.findById", query = "SELECT u FROM User u WHERE u.id = :id"),
+//    @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.name = :name"),
+//    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
+//    @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password"),
+//    @NamedQuery(name = "User.findByUserType", query = "SELECT u FROM User u WHERE u.userType = :userType")
+})
 public class Categoria implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,8 +44,8 @@ public class Categoria implements Serializable {
     private String nome;
     @Column(name = "DESCRICAO")
     private String descricao;
-    @OneToMany(mappedBy = "categoriaId", fetch = FetchType.LAZY)
-    private List<Produto> produtoList;
+    //    @OneToMany(mappedBy = "categoriaId", fetch = FetchType.LAZY)
+    //    private List<Produto> produtoList;
 
     public Categoria() {
     }
@@ -59,10 +58,6 @@ public class Categoria implements Serializable {
         this.id = id;
         this.nome = nome;
     }
-
-    
-    // +++++++++++++++++++    CATEGORIA AINDA NÃO RELACIONADA NA IMPLEMENTAÇÃO.  ++++++++++++++
-
 
     
     //    GETTERS E STTERS    
@@ -90,14 +85,14 @@ public class Categoria implements Serializable {
         this.descricao = descricao;
     }
 
-    @XmlTransient
-    public List<Produto> getProdutoList() {
-        return produtoList;
-    }
-
-    public void setProdutoList(List<Produto> produtoList) {
-        this.produtoList = produtoList;
-    }
+//    @XmlTransient
+//    public List<Produto> getProdutoList() {
+//        return produtoList;
+//    }
+//
+//    public void setProdutoList(List<Produto> produtoList) {
+//        this.produtoList = produtoList;
+//    }
 
     @Override
     public int hashCode() {
